@@ -179,3 +179,9 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Ignora a pasta onde as planilhas XLS da atividade 2 e 3 serão geradas
+data/
+
+#igonora o arquivo .log gerado na atividade 4
+*.log
