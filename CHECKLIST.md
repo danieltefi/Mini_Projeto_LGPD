@@ -10,14 +10,14 @@ Este checklist detalha as etapas de construção do sistema de conformidade com 
 - [x] **Conexão:** Configurar `create_engine` para o banco PostgreSQL (Host: 200.19.224.150).
 
 ## 🔵 2. Modelo de Dados e POO
-- [ ] **Abstração:** Definir a classe `Usuario` mapeada para a tabela do banco de dados.
-- [ ] **Atributos:** Mapear `id`, `nome`, `cpf`, `email`, `telefone` e `data_nascimento`.
-- [ ] **Encapsulamento:** Implementar o método `anonimizar()` dentro da classe para proteger a lógica de tratamento.
-- [ ] **Atividade 1:** 
-    - [ ] Mascarar Nome (Ex: `O***** Sobrenome`).
-    - [ ] Mascarar CPF (Ex: `237.***.***-**`).
-    - [ ] Mascarar E-mail (Ex: `n*********@dominio.com`).
-    - [ ] Mascarar Telefone (Ex: manter apenas os 4 dígitos finais).
+- [x] **Abstração:** Definir a classe `Usuario` mapeada para a tabela do banco de dados.
+- [x] **Atributos:** Mapear `id`, `nome`, `cpf`, `email`, `telefone` e `data_nascimento`.
+- [x] **Encapsulamento:** Implementar o método `anonimizar()` dentro da classe para proteger a lógica de tratamento.
+- [x] **Atividade 1:** 
+    - [x] Mascarar Nome (Ex: `O***** Sobrenome`).
+    - [x] Mascarar CPF (Ex: `237.***.***-**`).
+    - [x] Mascarar E-mail (Ex: `n*********@dominio.com`).
+    - [x] Mascarar Telefone (Ex: manter apenas os 4 dígitos finais - `+** (***) *****-6810`).
 
 ## 🟡 3. Processamento e Exportação
 - [ ] Criar diretório `data/` para armazenar os arquivos de saída.
