@@ -5,9 +5,9 @@ Este checklist detalha as etapas de construção do sistema de conformidade com 
 ## 🟢 1. Configuração e Infraestrutura
 - [x] Inicializar repositório Git e configurar `.gitignore`.
 - [x] Criar ambiente virtual Python (`python -m venv .venv`).
-- [ ] Ativar o ambiente virtual e instalar dependências (`SQLAlchemy`, `psycopg2`, `pandas`, `openpyxl`).
-- [ ] Criar arquivo `requirements.txt` com as bibliotecas utilizadas.
-- [ ] **Conexão:** Configurar `create_engine` para o banco PostgreSQL (Host: 200.19.224.150).
+- [x] Ativar o ambiente virtual e instalar dependências (`SQLAlchemy`, `psycopg2`, `pandas`, `openpyxl`).
+- [x] Criar arquivo `requirements.txt` com as bibliotecas utilizadas.
+- [x] **Conexão:** Configurar `create_engine` para o banco PostgreSQL (Host: 200.19.224.150).
 
 ## 🔵 2. Modelo de Dados e POO
 - [ ] **Abstração:** Definir a classe `Usuario` mapeada para a tabela do banco de dados.

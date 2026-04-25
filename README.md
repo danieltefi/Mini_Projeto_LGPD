@@ -10,7 +10,7 @@ Este projeto tem como objetivo aplicar técnicas de anonimização de dados e ma
 
 ## 🛠️ Tecnologias
 - **Linguagem:** Python 3
-- **Bibliotecas:** 
+- **Bibliotecas:** SQLAlchemy, psycopg2, pandas, openpyxl
 - **Arquitetura:** Orientação a Objetos (POO) com uso de Decoradores para medição de performance.
 - **Saída:** Arquivo Exel (XLS).
 
