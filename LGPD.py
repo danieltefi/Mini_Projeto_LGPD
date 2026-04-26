@@ -63,7 +63,7 @@ def LGPD(row): # transforma a row em um objeto e anonimiza para a atividade 1
     return user_obj
 
 @medir_tempo
-def atividade_2(lista_usuarios): # exportar os dados anonimizados em arquivos XLS separados por ano
+def atividade_2(lista_usuarios): # atividade 2: exportar os dados anonimizados em arquivos XLS separados por ano
     grupos_por_ano = {} # cria um dicionário para agrupar por ano: { 1990: [dados], 1991: [dados] }
 
     for user in lista_usuarios:
@@ -90,14 +90,29 @@ def atividade_2(lista_usuarios): # exportar os dados anonimizados em arquivos XL
     
     print(f'Atividade 2: {len(grupos_por_ano)} arquivos gerados na pasta data.')
 
+@medir_tempo
+def atividade_3(lista_originais): # atividade 3: exporta dados para relatório geral não anonimizados
+    df = pd.DataFrame(lista_originais)
+    caminho = 'data/todos.xlsx'
+    df.to_excel(caminho, index=False)
+
+    print(f'Atividade 3: Arquivo "{caminho}" gerado com sucesso.')
+
 users = []
+dados_originais = [] # lista atividade 3 (sem anonimização)
 with engine.connect() as conn:
     result = conn.execute(text('SELECT * FROM usuarios;'))
     for row in result:
-        row = LGPD(row)
+        dados_originais.append({ # guarda os dados reais para a atividade 3 antes de anonimizar
+            'Nome': row[1], 
+            'CPF': row[2]
+        })
+
+        row = LGPD(row) # passa a ser anonimizada para as atividades 1 e 2
         users.append(row)
 
 for user in users[:5]: # ver apenas os 5 primeiros dados anonimizados no terminal para conferência da atividade 1
     print(f'Nome: {user.nome} \nCPF: {user.cpf} \nEmail: {user.email} \nTel: {user.telefone}')
 
 atividade_2(users) # chama a função para gerar os arquivos por ano
+atividade_3(dados_originais) # chama a função para gerar o arquivo de relatório geral
