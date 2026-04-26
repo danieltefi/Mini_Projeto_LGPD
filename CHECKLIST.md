@@ -22,7 +22,7 @@ Este checklist detalha as etapas de construção do sistema de conformidade com 
 ## 🟡 3. Processamento e Exportação
 - [x] Criar diretório `data/` para armazenar os arquivos de saída.
 - [x] **Atividade 2:** Implementar lógica para filtrar usuários por ano e exportar arquivos `.xls` individuais com dados **anonimizados**.
-- [ ] **Atividade 3:** Implementar lógica para exportar arquivo `todos.xls` contendo apenas Nome e CPF **(não anonimizados)**.
+- [x] **Atividade 3:** Implementar lógica para exportar arquivo `todos.xls` contendo apenas Nome e CPF **(não anonimizados)**.
 - [ ] **Polimorfismo:** Garantir que os métodos de exportação lidem corretamente com diferentes volumes de dados.
 
 ## 🟠 4. Performance e Monitoramento
