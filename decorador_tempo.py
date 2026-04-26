@@ -20,7 +20,7 @@ def medir_tempo(func): # decorador atividade 4, mede o tempo de execução de um
         mensagem = f'Função "{func.__name__}" executada em {duracao:.6f} segundos.'
         
         logging.info(mensagem) # grava no arquivo de log e mostra no terminal
-        print(f'⏱ {mensagem}')
+        print(f'{mensagem}')
         
         return resultado
     return wrapper
