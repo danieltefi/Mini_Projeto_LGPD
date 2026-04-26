@@ -99,11 +99,14 @@ with engine.connect() as conn:
         row = LGPD(row) # passa a ser anonimizada para as atividades 1 e 2
         users.append(row)
 
+print('\n----- Atividade 1: -----')
 for user in users[:5]: # ver apenas os 5 primeiros dados anonimizados no terminal para conferência da atividade 1
     print(f'Nome: {user.nome} \nCPF: {user.cpf} \nEmail: {user.email} \nTel: {user.telefone}')
 
+print('\n----- Atividade 2: -----')
 atividade_2(users) # chama a função para gerar os arquivos por ano
+print('\n----- Atividade 3: -----')
 atividade_3(dados_originais) # chama a função para gerar o arquivo de relatório geral
 
 if os.path.exists('data/execucao.log'): # verifica se o arquivo de log foi gerado para exibir no terminal
-    print('Atividade 4: Log de tempo de execução "data/execucao.log" gerado com sucesso')
+    print('\n----- Atividade 4: ----- \nLog de tempo de execução "data/execucao.log" gerado com sucesso')
