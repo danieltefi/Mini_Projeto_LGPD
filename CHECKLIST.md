@@ -23,19 +23,19 @@ Este checklist detalha as etapas de construção do sistema de conformidade com 
 - [x] Criar diretório `data/` para armazenar os arquivos de saída.
 - [x] **Atividade 2:** Implementar lógica para filtrar usuários por ano e exportar arquivos `.xls` individuais com dados **anonimizados**.
 - [x] **Atividade 3:** Implementar lógica para exportar arquivo `todos.xls` contendo apenas Nome e CPF **(não anonimizados)**.
-- [ ] **Polimorfismo:** Garantir que os métodos de exportação lidem corretamente com diferentes volumes de dados.
+- [x] **Polimorfismo:** Garantir que os métodos de exportação lidem corretamente com diferentes volumes de dados.
 
 ## 🟠 4. Performance e Monitoramento
-- [ ] Criar o arquivo `decorator_tempo.py`.
-- [ ] Implementar o decorador `@decorator_tempo` para capturar o tempo inicial e final da execução.
-- [ ] **Logging:** Configurar o módulo `logging` para salvar o nome da função e o tempo gasto no arquivo `execucao.log`.
-- [ ] **Atividade 4:** Aplicar o decorador nas funções das Atividades 2 e 3.
+- [x] Criar o arquivo `decorator_tempo.py`.
+- [x] Implementar o decorador `@medir_tempo` para capturar o tempo inicial e final da execução.
+- [x] **Logging:** Configurar o módulo `logging` para salvar o nome da função e o tempo gasto no arquivo `execucao.log`.
+- [x] **Atividade 4:** Aplicar o decorador nas funções das Atividades 2 e 3.
 
 ## 🔴 5. Finalização e Entrega
-- [ ] Realizar teste de integração (Script lendo o banco e gerando arquivos na pasta `data/`).
-- [ ] Comentar o código.
-- [ ] Atualizar o `README.md`.
-- [ ] Realizar o commit final e organizar a estrutura de pastas conforme o planejado.
+- [x] Realizar teste de integração (Script lendo o banco e gerando arquivos na pasta `data/`).
+- [x] Comentar o código.
+- [x] Atualizar o `README.md`.
+- [x] Realizar o commit final e organizar a estrutura de pastas conforme o planejado.
 
 ---
-*Status Atual: 🚧 Em desenvolvimento*
+*Status Atual: 🚧 Concluído*
