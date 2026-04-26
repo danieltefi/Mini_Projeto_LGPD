@@ -1,23 +1,11 @@
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, Date, DateTime, insert, text
 from datetime import datetime
-import time
-from functools import wraps
 import os
 import pandas as pd
+from decorador_tempo import medir_tempo
 
 if not os.path.exists('data'): # cria a pasta data se n existir
     os.makedirs('data')
-
-def medir_tempo(func): # decorator que mede o tempo de execução de uma função.
-    @wraps(func)
-    def wrapper(*args, **kwargs):
-        inicio = time.perf_counter()  # tempo inicial (mais preciso que time.time)
-        resultado = func(*args, **kwargs)
-        fim = time.perf_counter()     # tempo final
-        duracao = fim - inicio
-        print(f'⏱ Função "{func.__name__}" executada em {duracao:.6f} segundos.')
-        return resultado
-    return wrapper
 
 class Usuario: # cria a classe usuário para tratar os dados do banco (abstração)
     def __init__(self, row):
@@ -116,3 +104,6 @@ for user in users[:5]: # ver apenas os 5 primeiros dados anonimizados no termina
 
 atividade_2(users) # chama a função para gerar os arquivos por ano
 atividade_3(dados_originais) # chama a função para gerar o arquivo de relatório geral
+
+if os.path.exists('data/execucao.log'): # verifica se o arquivo de log foi gerado para exibir no terminal
+    print('Atividade 4: Log de tempo de execução "data/execucao.log" gerado com sucesso')
